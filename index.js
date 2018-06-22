@@ -1,4 +1,4 @@
-const crypto = require('./cryptojson');
+const crypto = require('./crytobject');
 
 const input = {a: 1, b: 2};
 
