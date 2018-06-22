@@ -1,9 +1,13 @@
-const crypto = require('./simplecrypto');
+const crypto = require('./cryptojson');
 
-const plaintext = "This is a plaintext";
+const input = {a: 1, b: 2};
 
-console.log("Encrypt: " + crypto.encrypted(plaintext));
+input_encrypted = crypto.encrypted(input);
 
-const cipher = crypto.encrypted(plaintext);
+console.log("Encrypted");
+console.log(input_encrypted);
 
-console.log("Decrypt: " + crypto.decrypted(cipher));
+output_decrypted = crypto.decrypted(input_encrypted);
+
+console.log("Decrypted");
+console.log(output_decrypted);
