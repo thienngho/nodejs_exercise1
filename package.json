@@ -1,6 +1,6 @@
 {
   "name": "nodejs_exercise1",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "crypto lib",
   "main": "index.js",
   "scripts": {
@@ -8,10 +8,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Thien Ho",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "crypto": "^1.0.1",
     "crypto-json": "^2.0.1",
     "object-encrypter": "^0.1.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thienngho/nodejs_exercise1"
   }
 }
