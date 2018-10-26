@@ -1,9 +1,9 @@
-const crypto = require('crypto');
+import { createCipher, createDecipher } from 'crypto';
 
 const secret = 'P@ssw0rd';
 
-exports.encrypted = function (plaintext) {
-    const cipher = crypto.createCipher('aes192', secret);
+export function encrypted (plaintext) {
+    const cipher = createCipher('aes192', secret);
 
     let encrypted = cipher.update(plaintext, 'utf8', 'hex');
     encrypted += cipher.final('hex');
@@ -11,8 +11,8 @@ exports.encrypted = function (plaintext) {
     return encrypted;
 }
 
-exports.decrypted = function (cipher) {
-    const decipher = crypto.createDecipher('aes192', secret);
+export function decrypted (cipher) {
+    const decipher = createDecipher('aes192', secret);
     let decrypted = decipher.update(cipher, 'hex', 'utf8');
     decrypted += decipher.final('utf8');
     
